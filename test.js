@@ -158,7 +158,6 @@ test('remove from a users favorite forums', async t => {
   // CREATE NEW FORUM
   let res = await request(app)
     .post('/api/users')
-    .send(newUser);
 
   t.is(res.status, 200);
   t.truthy(res.body.id);
@@ -281,7 +280,6 @@ test('Update one user', async t => {
 
   let res = await request(app)
     .post('/api/users')
-    .send(user);
 
   t.is(res.status, 200);
   t.truthy(res.body.id);
